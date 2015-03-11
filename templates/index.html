@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+
+<div class="row">
+	{% for restaurant in restaurants %}
+    <div class="col-xs-6 col-lg-4">
+      <h2>{{ restaurant.name }}</h2>
+      <p>{{ restaurant.menu }}</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div><!--/.col-xs-6.col-lg-4-->
+    {% endfor %}
+</div>
+
+{% endblock %}
