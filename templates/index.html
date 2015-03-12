@@ -7,7 +7,7 @@
 <div class="row">
 	{% for restaurant_data in last_entries %}
 
-    <div class="col-xs-6 col-lg-4">
+    <div class="col-xs-6 col-lg-3">
       <h2>{{ restaurant_data.name }}</h2>
       {% autoescape false %}
         <p>{{ restaurant_data.last_entry }}</p>
