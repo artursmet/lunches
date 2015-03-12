@@ -5,6 +5,9 @@ RESTAURANTS = [
     'slepyzaulek',
     'zztopwroclaw',
     'wodasodowa.wroclaw',
+    'bulkazmaslemwroclaw',
+    'Szynkarnia',
+    'DMleczna'
 ]
 
 fetch_restaurants_data(RESTAURANTS)
