@@ -4,17 +4,20 @@
 
 {% block content %}
 
-<div class="row">
-	{% for restaurant_data in last_entries %}
-
-    <div class="col-xs-6 col-lg-4">
-      <h2>{{ restaurant_data.name }}</h2>
-      {% autoescape false %}
-        <p>{{ restaurant_data.last_entry }}</p>
-      {% endautoescape %}
-      <p><a class="btn btn-default" href="{{ restaurant_data.url }}" role="button">More &raquo;</a></p>
-    </div><!--/.col-xs-6.col-lg-4-->
-    {% endfor %}
-</div>
+    <div class="row-same-height">
+        {% for restaurant_data in last_entries %}
+            <div class="col-xs-12 col-lg-3">
+              <a href="{{ restaurant_data.url }}">
+                <h2>{{ restaurant_data.name }}</h2>
+              </a>
+              {% autoescape false %}
+                <p>{{ restaurant_data.last_entry }}</p>
+              {% endautoescape %}
+            </div>
+            {% if loop.index is divisibleby 4 %}
+                <div class="clearfix"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
 
 {% endblock %}
