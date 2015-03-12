@@ -1,5 +1,6 @@
 # coding: utf-8
 import json
+import os
 from flask import Flask
 from flask import render_template
 from parser import get_last_entry
@@ -21,4 +22,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+	port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, port=port)
